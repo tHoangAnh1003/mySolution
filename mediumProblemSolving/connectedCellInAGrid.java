@@ -1,10 +1,7 @@
+package mediumProblemSolving;
+
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
 
 class Result {
 
@@ -14,6 +11,9 @@ class Result {
      * The function is expected to return an INTEGER.
      * The function accepts 2D_INTEGER_ARRAY matrix as parameter.
      */
+
+    // Link: https://www.hackerrank.com/challenges/connected-cell-in-a-grid/problem
+
     public static int connectedCell(List<List<Integer>> matrix) {
         int max = 0;
         for (int i = 0; i < matrix.size(); i++) {
@@ -52,7 +52,7 @@ class Result {
 
 }
 
-public class Solution {
+public class connectedCellInAGrid {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
