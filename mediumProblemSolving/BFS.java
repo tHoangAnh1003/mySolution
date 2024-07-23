@@ -19,6 +19,8 @@ class Result {
      *  4. INTEGER s
      */
 
+     // Link : https://www.hackerrank.com/challenges/bfsshortreach/problem
+
     public static List<Integer> bfs(int n, int m, List<List<Integer>> edges, int s) {
     // Write your code here
         List<Integer> dist = new ArrayList<>();

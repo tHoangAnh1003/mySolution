@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// Link : https://www.hackerrank.com/challenges/kruskalmstrsub/problem
+
 struct edge {
     int x, y, z;  
 };
