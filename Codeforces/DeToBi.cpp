@@ -4,6 +4,9 @@
 using namespace std;
 
 string changeToBinary(long n) {
+    if (n == 0)
+        return "0";
+    
     string s = "";
 
     for (int i = n; i > 0; i = (i >> 1)) {
@@ -16,6 +19,11 @@ string changeToBinary(long n) {
 }
 
 void changeToBinary2(long n) {
+    if (n == 0) {
+        cout << 0;
+        return;
+    }
+    
     if (n > 0) {
         changeToBinary2(n >> 1);
         cout << (n & 1);
