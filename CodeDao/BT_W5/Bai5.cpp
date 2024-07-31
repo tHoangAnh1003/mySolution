@@ -7,7 +7,7 @@ void trim_left(char *s) {
     
     if (left != s) {
         char *d = s;
-        while (left) {
+        while (*left) {
             (*d ++) = (*left ++);
         }
         *d = '\0';
