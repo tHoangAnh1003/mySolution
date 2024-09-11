@@ -1,10 +1,10 @@
-// package HomeWork;
+package mediumProblemSolving;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class NewYearChaos {
+public class newYearChaos {
 
     public static void minimumBribes(List<Integer> q) {
         int answer = 0;
