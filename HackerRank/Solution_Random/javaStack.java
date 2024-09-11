@@ -10,6 +10,8 @@ class Solution{
             //Complete the code
             System.out.println(stack(input));
 		}
+
+        sc.close();
 		
 	}
     
