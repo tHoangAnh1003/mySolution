@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
@@ -21,15 +22,23 @@ int main() {
         }
     }
     
-    // cout << f[n][m] << '\n'; 
-    
-    int index = n;
-    
-    for (int i = 1; i <= m; ++i) {
-        if (f[index][i] != f[index][i - 1]) {
-            cout << y[i - 1];
+    string res = "";
+    int i = n, j = m;
+    while (i > 0 && j > 0) {
+        if (x[i - 1] == y[j - 1]) {
+            res += x[i - 1];
+            --i;
+            --j;
+        } else if (f[i - 1][j] > f[i][j - 1]) {
+            --i;
+        } else {
+            --j;
         }
     }
+
+    reverse(res.begin(), res.end());
+    
+    cout << res;
     
     return 0;
 }
