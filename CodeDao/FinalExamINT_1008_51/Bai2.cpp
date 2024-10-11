@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int a[1000][1000];
+const int maxN = 1001;
+
+int a[maxN][maxN];
 int n;
 
 void loang(int i, int j, int& sum) {
@@ -21,7 +23,7 @@ int main() {
 		}
 	}
 	
-	int ms = -1000;
+	int ms = INT16_MIN;
 	
 	for (int i = 0; i < n; ++i) {
 		for (int j = 0; j < n; ++j) {
