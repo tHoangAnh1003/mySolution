@@ -1,12 +1,21 @@
 import java.util.Scanner;
 
 public class Bai1 {
-	public static void main(String[] args) {
+
+	private long n;
+	private int a;
+	private int b;
+
+	public Bai1() {
+		solve();
+	}
+
+	public void solve() {
 		Scanner sc = new Scanner(System.in);
 
-		long n = sc.nextLong();
-		int a = sc.nextInt();
-		int b = sc.nextInt();
+		n = sc.nextLong();
+		a = sc.nextInt();
+		b = sc.nextInt();
 
 		if (a <= b / 2) {
 			System.out.println(a * n);
@@ -19,5 +28,9 @@ public class Bai1 {
 		}
 
         sc.close();
+	}
+
+	public static void main(String[] args) {
+		new Bai1();
 	}
 }
