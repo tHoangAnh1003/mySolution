@@ -1,8 +1,15 @@
 import java.util.*;
 
 public class Bai3 {
+	private int n;
+	private int k;
+	private List<Integer> arr = new ArrayList<>();
 
-	public static int upperBound(List<Integer> arr, int n, int k) {
+	public Bai3() {
+		solve();
+	}
+
+	public int upperBound() {
 		int low = 0;
 		int high = n - 1;
 		int ans = 0;
@@ -21,12 +28,10 @@ public class Bai3 {
 		return ans;
 	}
 
-	public static void main(String[] args) {
+	public void solve() {
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int k = sc.nextInt();
-		
-		List<Integer> arr = new ArrayList<>();
+		n = sc.nextInt();
+		k = sc.nextInt();
 
 		for (int i = 0; i < n; ++i) {
 			int temp = sc.nextInt();
@@ -39,7 +44,7 @@ public class Bai3 {
 			}
 		});
 
-		int ans = upperBound(arr, n, k);
+		int ans = upperBound();
 
 		if (ans != 0) {
 			System.out.println(ans);
@@ -48,5 +53,9 @@ public class Bai3 {
 		}
 		
 		sc.close();
+	}
+
+	public static void main(String[] args) {
+		new Bai3();
 	}
 }
