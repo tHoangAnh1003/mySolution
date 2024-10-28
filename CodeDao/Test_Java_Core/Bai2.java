@@ -2,7 +2,14 @@ import java.util.Scanner;
 
 public class Bai2 {
 
-	public static boolean checkPrime(int n) {
+	private int n;
+	private int k;
+
+	public Bai2() {
+		solve();
+	}
+
+	public boolean checkPrime(int n) {
 		for (int i = 2; i <= Math.sqrt(n); ++i) {
 			if (n % i == 0) {
 				return false;
@@ -12,7 +19,7 @@ public class Bai2 {
 		return n > 1;
 	}
 
-	public static int sumDigit(int n) {
+	public int sumDigit(int n) {
 		int sum = 0;
 		while (n > 0) {
 			sum += (n % 10);
@@ -21,10 +28,10 @@ public class Bai2 {
 		return sum;
 	}
 
-	public static void main(String[] args) {
+	public void solve() {
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int k = sc.nextInt();
+		n = sc.nextInt();
+		k = sc.nextInt();
 
 		for (int i = 0; i < n; ++i) {
 			int temp = sc.nextInt();
@@ -34,5 +41,9 @@ public class Bai2 {
 		}
 		
 		sc.close();
+	}
+
+	public static void main(String[] args) {
+		new Bai2();
 	}
 }
