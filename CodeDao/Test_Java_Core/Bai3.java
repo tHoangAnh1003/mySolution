@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Bai3 {
 	private int n;
+	private int q;
 	private int k;
 	private List<Integer> arr = new ArrayList<>();
 
@@ -31,7 +32,7 @@ public class Bai3 {
 	public void solve() {
 		Scanner sc = new Scanner(System.in);
 		n = sc.nextInt();
-		k = sc.nextInt();
+		q = sc.nextInt();
 
 		for (int i = 0; i < n; ++i) {
 			int temp = sc.nextInt();
@@ -44,12 +45,17 @@ public class Bai3 {
 			}
 		});
 
-		int ans = upperBound();
+		for (int i = 0; i < q; ++i) {
+			k = sc.nextInt();
 
-		if (ans != 0) {
-			System.out.println(ans);
-		} else {
-			System.out.println("FA NOEL");
+			int ans = upperBound();
+
+			if (ans != 0) {
+				System.out.println(ans);
+			} else {
+				System.out.println("FA NOEL");
+			}
+
 		}
 		
 		sc.close();
