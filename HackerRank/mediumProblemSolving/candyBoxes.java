@@ -1,3 +1,5 @@
+package mediumProblemSolving;
+
 import java.util.*;
 
 public class candyBoxes {
