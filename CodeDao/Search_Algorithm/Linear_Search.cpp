@@ -29,5 +29,6 @@ int main() {
         int target; cin >> target;
         cout << linearSearch(arr, n, target) << '\n';
     }
+    
     return 0;
 }

@@ -1,23 +1,18 @@
 #include <iostream>
+#include <cmath> 
 using namespace std;
 
-void show(int n) {
-	if (n < 2) {
-		cout << n % 2;
-		return;
-	}
-	show(n / 2);
-	cout << n % 2;
-}
-
-int solve(int n) {
-	if (n < 10)
-		return n;
-	return solve(n / 10);
-}
 
 int main() {
-	int n; cin >> n;
-	cout << solve(n);
+	int n;
+
+	do {
+		cin >> n;
+		if (n < 5 || n > 10)
+			cout << "Nhap lai: ";
+	} while (n < 5 || n > 10);
+	
+	cout << "N la " << n;
+	
     return 0;
 }
